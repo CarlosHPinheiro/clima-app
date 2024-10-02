@@ -24,39 +24,40 @@
             <div class="form">
                 <h3>Confira o clima de sua cidade:</h3>
 
-                <div class="form-input-container">
+                <form class="form-input-container" action="/clima">
                     <input
                         type="text"
                         placeholder="Digite o nome da cidade"
                         id="city-input"
+                        name="cidade"
                     />
-                    <button id="search">
+                    <button id="search" type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                </div>
+                </form>
             </div>
 
             <div id="weather-data">
                 <h2>
                     <i class="fa-solid fa-location-dot"></i>
-                    <span id="city">Contagem</span>
+                    <span id="city">{{cidade}}</span>
                     <img src="https://flagsapi.com/BR/flat/64.png" alt="Bandeira do país" id="country" />
                 </h2>
-                <p id="temperature"><span>35</span>&deg;C</p>
+                <p id="temperature"><span>{{temperatura}}</span>&deg;C</p>
 
                 <div id="description-container">
-                    <p id="description">Chuva Intermitente</p>
+                    <p id="description">{{clima}}</p>
                     <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Condições climáticas" id="weather-icon" />
                 </div>
 
                 <div id="details-container">
                     <p id="umidity">
                         <i class="fa-solid fa-droplet"></i>
-                        <span>36%</span>
+                        <span>{{umidade}}%</span>
                     </p>
                     <p id="wind">
                         <i class="fa-solid fa-wind"></i>
-                        <span>4km/h</span>
+                        <span>{{vento}} km/h</span>
                     </p>
                 </div>
             </div>

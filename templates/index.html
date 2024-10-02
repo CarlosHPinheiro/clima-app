@@ -24,16 +24,17 @@
         <div class="form">
             <h3>Confira o clima de sua cidade:</h3>
 
-            <div class="form-input-container">
+            <form class="form-input-container" action="/clima">
                 <input
                     type="text"
                     placeholder="Digite o nome da cidade"
                     id="city-input"
+                    name="cidade"
                 />
-                <button id="search">
+                <button id="search" type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-            </div>
+            </form>
 
             <div id="details-container">
                 <p id="umidity">
