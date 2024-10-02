@@ -1,19 +1,18 @@
 import requests
 
-API_KEY = "39476510ebd34b2d6e6db19947564172"
-city = "Santos"
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric&lang=pt_br"
+API_KEY = ""
 
-request = requests.get(url)
-response = request.json()
+def get_data(url, cidade, API_KEY):
+    request = requests.get(url)
+    response = request.json()
+    print(response)
 
-if request.status_code == 404:
-    print("Cidade não encontrada")
+    clima = response['weather'][0]['description'].title()
+    temperatura = response['main']['temp']
+    temperatura = f'{temperatura:.1f}'
+    umidade = response['main']['humidity']
+    cidade = response['name']
+    vento = response["wind"]["speed"]
+    pais = response["sys"]["country"]
 
-weather = response['weather'][0]['main']
-description = response['weather'][0]['description']
-temperature = response['main']['temp']
-humidity = response['main']['humidity']
-city_name = response['name']
-
-print(f'Cidade: {city_name} \nTemperatura: {temperature:.1f}°C \nClima: {weather} - {description} \nUmidade relativa do ar: {humidity}%')
+    return {"clima": clima, "temperatura": temperatura, "umidade": umidade, "cidade": cidade, "vento": vento, "pais": pais}
