@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url('background.jpg');
+  background-image: url('blue-gradient-background.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -14,10 +14,12 @@ body {
 }
 
 .container {
-  background-color: #74a7a7;
+  background: linear-gradient(to bottom, #5cdfdf, #509898);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 2rem;
   color: #fdfdfd;
   border-radius: 1rem;
+
 }
 
 .form h3 {
@@ -26,8 +28,6 @@ body {
 
 .form-input-container {
   display: flex;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #fdfdfd;
 }
 
 .form input {
@@ -41,11 +41,48 @@ body {
   padding: 0.8rem;
   min-width: 50px;
   margin-left: 8px;
-  background-color: #5a8080;
+  background-color: #39a2a2;
   color: #fdfdfd;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.form button:hover {
+  background-color: #42bebe;
+  transform: scale(1.05);
+}
+
+#weather-data {
+  border-top: 1px solid #fdfdfd;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+#weather-data h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+#weather-data span {
+  margin: 0.6rem;
+}
+
+#country {
+  height: 30px;
+}
+
+#temperature {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#description-container p {
+  margin-top: 1rem;
 }
 
 #details-container {
@@ -58,4 +95,12 @@ body {
   border-right: 1px solid #fdfdfd;
   margin: 0.6rem;
   padding: 0.6rem;
+  padding-left: 2rem;
+}
+
+@media(max-width:330px) {
+.container {
+  padding-left:1rem;
+  padding-right:1rem;
+  }
 }
