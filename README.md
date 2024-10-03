@@ -2,7 +2,7 @@
 
 Aplicação desenvolvida em Python com o intuito de exibir as informações climáticas de uma determinada cidade.
 
-A aplicação exibe informações como temperatura atual, clima, umidade relativa do ar e velocidade média do vento, além do país no qual a cidade informada está cituada.
+A aplicação exibe informações como a temperatura atual, o clima, a umidade relativa do ar e a velocidade média do vento, além do país no qual a cidade informada está cituada.
 
 ## Tecnologias Utilizadas
 - **HTML** - https://www.w3schools.com/html/
@@ -89,12 +89,12 @@ A aplicação utiliza dados climáticos coletados e fornecidos pela Open Weather
 
 Para obter acesso aos dados climáticos através das requisições, é necessário possuir uma chave API válida. A chave pode ser adquirida através do site oficial da Open Weather.
 
-A aplicação utiliza variáveis de ambiente para ter acesso a chave. Configure a chave válida em uma variável `API_KEY` no arquivo `.env`
+A aplicação utiliza variáveis de ambiente para ter acesso a chave da API utilizada nas requisições. Configure a chave válida em uma variável `API_KEY` no arquivo `.env`.
 
 **Execução**
 
-Após concluir os passos anteriores, para rodar o programa, basta executar o arquivo `routes.py` para criar o servidor local. Por padrão a aplicação será executada em `https://localhost:5000/`
+Após concluir os passos anteriores, para rodar o programa basta executar o arquivo `routes.py` para criar o servidor local. Por padrão a aplicação será executada em `https://localhost:5000/`
 
 ### Screenshots
 
-[](static/img/screenshots.png)
+![screenshots](static/img/screenshots.png)
