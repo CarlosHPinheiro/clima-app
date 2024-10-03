@@ -2,7 +2,7 @@
 
 Aplicação desenvolvida em Python com o intuito de exibir as informações climáticas de uma determinada cidade.
 
-A aplicação exibe informações como a temperatura atual, o clima, a umidade relativa do ar e a velocidade média do vento, além do país no qual a cidade informada está cituada.
+A aplicação exibe informações como a temperatura atual, o clima, a umidade relativa do ar e a velocidade média do vento, além do país no qual a cidade informada está situada.
 
 ## Tecnologias Utilizadas
 - **HTML** - https://www.w3schools.com/html/
