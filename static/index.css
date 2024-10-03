@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url('blue-gradient-background.jpg');
+  background-image: url('./img/blue-gradient-background.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
