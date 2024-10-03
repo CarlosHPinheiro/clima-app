@@ -1,23 +1,22 @@
 from flask import Flask, render_template, request, redirect, url_for
-from main import get_data, API_KEY
+from main import get_data
+from dotenv import load_dotenv
+import os
 
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def index():
-    return render_template("index.html")
-
-
-@app.route("/clima", methods=['GET'])
-def clima():
     cidade = request.args.get('cidade')
+    load_dotenv()
+    API_KEY = os.getenv("API_KEY")
 
     url = f"https://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={API_KEY}&units=metric&lang=pt_br"
 
     data = get_data(url, cidade, API_KEY)
 
-    return render_template(f"clima.html", cidade = data["cidade"], temperatura = data["temperatura"], clima = data["clima"], umidade = data["umidade"], vento = data["vento"], icon = data["icon"], pais = data["pais"])
+    return render_template(f"index.html", cidade = data["cidade"], temperatura = data["temperatura"], clima = data["clima"], umidade = data["umidade"], vento = data["vento"], icon = data["icon"], pais = data["pais"])
 
 
 # Tratamento de erros
